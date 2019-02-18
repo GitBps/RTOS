@@ -1,0 +1,7 @@
+Manual mode => 
+-------------------
+killall -KILL serverA; gcc -o serverA server/server.c -lrt -lpthread -std=c99; gcc -o clientA client/clientA.c  -lrt -lpthread   
+
+Automatic calculation mode =>
+---------------------------------
+killall -KILL serverA; gcc -o serverA server/server.c -lrt -lpthread -std=c99; gcc -o clientA client/clientA.c -DAUTO_TEST_MODE -lrt -lpthread   
