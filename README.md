@@ -8,11 +8,16 @@ Some opensource exercises for IPC Experimentation.
 CONTENTS
 ---------
 a) ClientA: client code for IPC demonstration and Performance evaluation
-b) Common.h: includes the common functions and headers which can be used between the clients and c) servers since the functionality is repeating - this is to keep the code clean
-d) ServerA: is the main server IPC Echo engine which is working the way described. 
+
+b) Common.h: includes the common functions and headers which can be used between the clients and 
+servers since the functionality is repeating - this is to keep the code clean
+
+c) ServerA: is the main server IPC Echo engine which is working the way described. 
 
 and their individual exectibles too.
 ClientA to be run on multiple windows/terminal tabs.
+
+I plan to club the common into a c library that folks could use for all wrappers for IPC experiments.
 
 
 HOW TO BUILD : 
