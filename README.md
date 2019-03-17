@@ -1,5 +1,9 @@
 # RTOS
 
+PERFORMANCE PLOTS 
+-------------------
+PICS PNG1 and 2 are in root from the socket example for 1,2,3,4,5 clients working together.
+
 ECHOSERVER : 
 ------------
 Some opensource exercises for IPC Experimentation.
