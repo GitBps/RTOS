@@ -3,6 +3,7 @@
 PERFORMANCE PLOTS 
 -------------------
 PICS PNG1 and 2 are in root from the socket example for 1,2,3,4,5 clients working together.
+X - Axis of plot is the Frame Number and Y-Axis is the time taken to schedule client 1 in presence of various clients concurrently.
 
 ECHOSERVER : 
 ------------
