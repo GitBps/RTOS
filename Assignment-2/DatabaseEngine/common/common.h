@@ -17,7 +17,7 @@ struct my_msgbuf {
     char mtext[200];
 };
 
-struct timespec tstart={0,0}, tend={0,0};
+struct timespec tstart={0,0}, tprev={0,0}, tend={0,0};
 
 int setupMessageQueues(int *, int*);
 int sendMessage (struct my_msgbuf *, int, long );
@@ -146,7 +146,18 @@ int connectSocket()
  * ***********************************************************/
 void startMonitoring()
 {
+    //Save the last time we called this for current PID.
+    //(double)tprev.tv_sec = (double)tstart.tv_sec; 
+    //(double)tprev.tv_nsec = (double)tstart.tv_nsec; 
+
+    memcpy(&tprev, &tstart, sizeof(struct timespec));
+
     clock_gettime(CLOCK_MONOTONIC, &tstart);
+
+    fprintf(stderr,"%d,%.5f\n", getpid(),
+           ((double)tstart.tv_sec + 1.0e-9*tstart.tv_nsec) - 
+           ((double)tprev.tv_sec + 1.0e-9*tprev.tv_nsec));
+    
 }
 
 /**************************************************************

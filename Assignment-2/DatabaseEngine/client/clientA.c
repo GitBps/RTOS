@@ -21,17 +21,17 @@ int main(void)
 #endif
     	{
     	    long len = strlen(buf);
-			long sent = 0;
+	    long sent = 0;
 
     		/* ditch newline at end, if it exists */
-    		if (buf[len-1] == '\n') buf[len-1] = '\0';
+    	    if (buf[len-1] == '\n') buf[len-1] = '\0';
 
 #ifndef AUTO_TEST_MODE
-    		if (len == 1) continue; //It is only a \n no need to transmit.
+            if (len == 1) continue; //It is only a \n no need to transmit.
     	    len = len-1;
 #endif
     					//Start Perfomance Monitoring per PID
-    		startMonitoring();
+    	    startMonitoring();
 
             sent = sendData (sockfd, buf, len);
             if(sent < 0)
@@ -61,8 +61,8 @@ int main(void)
                 sendData (sockfd, buf, strlen(buf));
             }							
     				
-    		//End Monitoring and begin verification
-    		verifyPerformance();
+            //End Monitoring and begin verification
+    	    //verifyPerformance();
     	}
 #ifdef AUTO_TEST_MODE
     }
