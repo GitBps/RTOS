@@ -1,0 +1,1 @@
+killall -KILL server; gcc -o server server.c -lrt -lpthread -lpulse-simple -lpulse; gcc -o client clientA.c  -lrt -lpulse-simple
